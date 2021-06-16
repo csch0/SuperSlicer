@@ -3,3 +3,5 @@ arch=x86_64
 arch_build=x86_64
 os=Linux
 os_build=Linux
+[env]
+CONAN_CMAKE_GENERATOR=Ninja
