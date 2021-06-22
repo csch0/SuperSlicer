@@ -3,5 +3,5 @@ compiler=gcc
 compiler.version=9
 compiler.libcxx=libstdc++11
 [env]
-CC=ccache gcc-9
-CXX=ccache g++-9
+CC=gcc-9
+CXX=g++-9
