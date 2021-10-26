@@ -1375,6 +1375,7 @@ public:
     ConfigOptionFloats              wiping_volumes_matrix;
     ConfigOptionFloats              wiping_volumes_extruders;
     ConfigOptionFloat               z_offset;
+    ConfigOptionFloat               z_rotate;
 
 protected:
     PrintConfig(int) : MachineEnvelopeConfig(1), GCodeConfig(1) {}
@@ -1478,6 +1479,7 @@ protected:
         OPT_PTR(wiping_volumes_matrix);
         OPT_PTR(wiping_volumes_extruders);
         OPT_PTR(z_offset);
+        OPT_PTR(z_rotate);
     }
 };
 
@@ -1764,6 +1766,7 @@ public:
     ConfigOptionBool                        thumbnails_custom_color;
     ConfigOptionBool                        thumbnails_with_bed;
     ConfigOptionBool                        thumbnails_with_support;
+    ConfigOptionFloat                       z_rotate;
 protected:
     void initialize(StaticCacheBase &cache, const char *base_ptr)
     {
@@ -1795,6 +1798,7 @@ protected:
         OPT_PTR(thumbnails_custom_color);
         OPT_PTR(thumbnails_with_bed);
         OPT_PTR(thumbnails_with_support);
+        OPT_PTR(z_rotate);
     }
 };
 
