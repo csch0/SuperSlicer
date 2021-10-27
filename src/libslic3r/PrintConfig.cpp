@@ -710,6 +710,16 @@ void PrintConfigDef::init_fff_params()
     def->min = 0;
     def->set_default_value(new ConfigOptionFloat(0));
 
+    def = this->add("initial_rotation", coFloat);
+    def->label = L("Initial Z rotation");
+    def->category = OptionCategory::general;
+    def->tooltip = L("Default z rotation used while adding. This will just be used during add, not during profile change.");
+    def->sidetext = L("°");
+    def->min = -180;
+    def->max = 180;
+    def->mode = comAdvanced;
+    def->set_default_value(new ConfigOptionFloat(0.0));
+
     def = this->add("end_gcode", coString);
     def->label = L("End G-code");
     def->category = OptionCategory::customgcode;
@@ -4664,16 +4674,6 @@ void PrintConfigDef::init_fff_params()
     def->precision = 8;
     def->mode = comExpert;
     def->set_default_value(new ConfigOptionFloat(0.005));
-
-    def = this->add("z_rotate", coFloat);
-    def->label = L("Z rotate on add");
-    def->category = OptionCategory::general;
-    def->tooltip = L("Rotate stl around z axes while adding to the bed.");
-    def->sidetext = L("°");
-    def->min = -180;
-    def->max = 180;
-    def->mode = comAdvanced;
-    def->set_default_value(new ConfigOptionFloat(0.0));
 
     // Declare retract values for filament profile, overriding the printer's extruder profile.
     for (const char *opt_key : {

@@ -360,6 +360,7 @@ group:Advanced
 page:Output options:output+page_white
 group:Plater
 	setting:duplicate_distance
+	setting:initial_rotation
 group:Sequential printing
 	setting:complete_objects
 	setting:complete_objects_one_skirt

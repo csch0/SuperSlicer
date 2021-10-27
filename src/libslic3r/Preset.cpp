@@ -448,6 +448,7 @@ const std::vector<std::string>& Preset::print_options()
         "bottom_solid_min_thickness",
         "solid_over_perimeters",
         "duplicate_distance",
+        "initial_rotation",
         "extra_perimeters",
         "extra_perimeters_odd_layers",
         "extra_perimeters_overhangs",
@@ -724,7 +725,7 @@ const std::vector<std::string>& Preset::printer_options()
     if (s_opts.empty()) {
         s_opts = {
             "printer_technology",
-            "bed_shape", "bed_custom_texture", "bed_custom_model", "z_offset", "z_rotate",
+            "bed_shape", "bed_custom_texture", "bed_custom_model", "z_offset",
             "fan_kickstart",
             "fan_speedup_overhangs",
             "fan_speedup_time",

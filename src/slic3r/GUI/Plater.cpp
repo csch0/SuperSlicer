@@ -1979,7 +1979,7 @@ Plater::priv::priv(Plater *q, MainFrame *main_frame)
         "complete_objects_sort",
         "complete_objects_one_skirt",
 		"complete_objects_one_brim",
-        "duplicate_distance", "extruder_clearance_radius", 
+        "duplicate_distance", "initial_rotation", "extruder_clearance_radius", 
         "skirt_extrusion_width",
         "first_layer_extrusion_width",
         "perimeter_extrusion_width",
@@ -1993,7 +1993,7 @@ Plater::priv::priv(Plater *q, MainFrame *main_frame)
         "layer_height", "first_layer_height", "min_layer_height", "max_layer_height",
         "brim_width", "perimeters", "perimeter_extruder", "fill_density", "infill_extruder", "top_solid_layers", 
         "support_material", "support_material_extruder", "support_material_interface_extruder", "support_material_contact_distance", "raft_layers",
-        "z_step", "z_rotate"
+        "z_step"
         }))
     , sidebar(new Sidebar(q))
     , m_ui_jobs(this)
@@ -2453,7 +2453,7 @@ std::vector<size_t> Plater::priv::load_files(const std::vector<fs::path>& input_
                     if (obj->name.empty()) {
                         obj->name = fs::path(obj->input_file).filename().string();
                     }
-                    obj->rotate(Geometry::deg2rad(config->opt_float("z_rotate")), Axis::Z);
+                    obj->rotate(Geometry::deg2rad(config->opt_float("initial_rotation")), Axis::Z);
                 }
             }
         } catch (const ConfigurationError &e) {

@@ -1296,6 +1296,7 @@ public:
     ConfigOptionFloats              colorprint_heights;
     ConfigOptionBools               cooling;
     ConfigOptionFloatOrPercent      default_acceleration;
+    ConfigOptionFloat               initial_rotation;
     ConfigOptionInts                disable_fan_first_layers;
     ConfigOptionFloat               duplicate_distance;
     ConfigOptionInts                external_perimeter_fan_speed;
@@ -1375,7 +1376,6 @@ public:
     ConfigOptionFloats              wiping_volumes_matrix;
     ConfigOptionFloats              wiping_volumes_extruders;
     ConfigOptionFloat               z_offset;
-    ConfigOptionFloat               z_rotate;
 
 protected:
     PrintConfig(int) : MachineEnvelopeConfig(1), GCodeConfig(1) {}
@@ -1401,6 +1401,7 @@ protected:
         OPT_PTR(cooling);
         OPT_PTR(default_acceleration);
         OPT_PTR(disable_fan_first_layers);
+        OPT_PTR(initial_rotation);
         OPT_PTR(duplicate_distance);
         OPT_PTR(external_perimeter_fan_speed);
         OPT_PTR(extruder_clearance_height);
@@ -1479,7 +1480,6 @@ protected:
         OPT_PTR(wiping_volumes_matrix);
         OPT_PTR(wiping_volumes_extruders);
         OPT_PTR(z_offset);
-        OPT_PTR(z_rotate);
     }
 };
 
@@ -1766,7 +1766,6 @@ public:
     ConfigOptionBool                        thumbnails_custom_color;
     ConfigOptionBool                        thumbnails_with_bed;
     ConfigOptionBool                        thumbnails_with_support;
-    ConfigOptionFloat                       z_rotate;
 protected:
     void initialize(StaticCacheBase &cache, const char *base_ptr)
     {
@@ -1798,7 +1797,6 @@ protected:
         OPT_PTR(thumbnails_custom_color);
         OPT_PTR(thumbnails_with_bed);
         OPT_PTR(thumbnails_with_support);
-        OPT_PTR(z_rotate);
     }
 };
 
