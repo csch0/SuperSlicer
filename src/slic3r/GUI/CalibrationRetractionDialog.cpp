@@ -50,17 +50,17 @@ void CalibrationRetractionDialog::create_buttons(wxStdDialogButtonSizer* buttons
     decr_temp->SetSelection(0);
     decr_temp->SetEditable(false);
 
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Step:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Step:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(steps);
     buttons->AddSpacer(15);
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Height:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Height:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(nb_steps);
     buttons->AddSpacer(20);
 
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Start temp:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Start temp:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(temp_start);
     buttons->AddSpacer(15);
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Temp decr:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Temp decr:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(decr_temp);
     buttons->AddSpacer(20);
 
