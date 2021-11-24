@@ -36,11 +36,11 @@ void CalibrationCubeDialog::create_buttons(wxStdDialogButtonSizer* buttons){
     calibrate->SetSelection(0);
     calibrate->SetEditable(false);
 
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Dimension:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Dimension:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(scale);
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("mm")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("mm")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->AddSpacer(40);
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Goal:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Goal:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(calibrate);
     buttons->AddSpacer(40);
 

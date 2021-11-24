@@ -39,13 +39,13 @@ void CalibrationTempDialog::create_buttons(wxStdDialogButtonSizer* buttons){
     nb_up->SetToolTip(_L("Select the number of tests with higher temperature than the current one."));
     nb_up->SetSelection(2);
 
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Nb down:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Nb down:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(nb_down);
     buttons->AddSpacer(15);
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Nb up:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Nb up:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(nb_up);
     buttons->AddSpacer(40);
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Steps:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Steps:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(steps);
     buttons->AddSpacer(40);
 

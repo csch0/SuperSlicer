@@ -36,10 +36,10 @@ void CalibrationBridgeDialog::create_buttons(wxStdDialogButtonSizer* buttons){
     nb_tests->SetToolTip(_L("Select the number of tests"));
     nb_tests->SetSelection(4);
 
-    buttons->Add(new wxStaticText(this, wxID_ANY,_L("Step:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY,_L("Step:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(steps);
     buttons->AddSpacer(15);
-    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Nb tests:")));
+    buttons->Add(new wxStaticText(this, wxID_ANY, _L("Nb tests:")), 0, wxALIGN_CENTER_VERTICAL);
     buttons->Add(nb_tests);
     buttons->AddSpacer(40);
     wxButton* bt = new wxButton(this, wxID_FILE1, _L("Test Flow Ratio"));
