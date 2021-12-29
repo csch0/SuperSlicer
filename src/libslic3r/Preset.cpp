@@ -592,6 +592,7 @@ const std::vector<std::string>& Preset::print_options()
         "clip_multipart_objects",
         "over_bridge_flow_ratio",
         "bridge_overlap",
+        "bridge_overlap_min",
         "first_layer_flow_ratio",
         "clip_multipart_objects", "enforce_full_fill_volume", "external_infill_margin", "bridged_infill_margin",
         // compensation
@@ -627,9 +628,10 @@ const std::vector<std::string>& Preset::print_options()
         "thin_walls_overlap",
         "thin_walls_speed",
         "thin_walls_merge",
-        //precision, spoothign
+        //precision, smoothing
         "model_precision",
         "resolution",
+        "resolution_internal",
         "curve_smoothing_precision",
         "curve_smoothing_cutoff_dist",
         "curve_smoothing_angle_convex",
@@ -696,7 +698,7 @@ const std::vector<std::string>& Preset::filament_options()
         "filament_retract_length", "filament_retract_lift", "filament_retract_lift_above", "filament_retract_lift_below", "filament_retract_speed", "filament_deretract_speed", "filament_retract_restart_extra", "filament_retract_before_travel",
         "filament_retract_layer_change", "filament_retract_before_wipe", 
         "filament_seam_gap",
-        "filament_wipe", "filament_wipe_extra_perimeter", "filament_wipe_speed",
+        "filament_wipe", "filament_wipe_only_crossing", "filament_wipe_extra_perimeter", "filament_wipe_speed",
         // Profile compatibility
         "filament_vendor", "compatible_prints", "compatible_prints_condition", "compatible_printers", "compatible_printers_condition", "inherits"
         //merill adds
@@ -899,7 +901,7 @@ const std::vector<std::string>& Preset::sla_printer_options()
             "min_initial_exposure_time", "max_initial_exposure_time",
             //FIXME the print host keys are left here just for conversion from the Printer preset to Physical Printer preset.
             "print_host", "printhost_apikey", "printhost_cafile", "printhost_port",
-            "printer_custom_variables",
+            "printer_notes",
             "inherits",
             "thumbnails",
             "thumbnails_color",

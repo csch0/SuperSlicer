@@ -83,6 +83,7 @@ group:Layer height
 	setting:first_layer_height
 group:Filtering
 	setting:resolution
+	setting:resolution_internal
 	setting:model_precision
 	setting:slice_closing_radius
 group:Modifying slices
@@ -321,8 +322,11 @@ group:Overlap
 		setting:label$External:external_perimeter_overlap
 		setting:label$Gap Fill:gap_fill_overlap
 	end_line
+	line:Bridge lines density
+		setting:bridge_overlap_min
+		setting:bridge_overlap
+	end_line
 	setting:sidetext_width$7:infill_overlap
-	setting:bridge_overlap
 group:Flow
 	line:Flow ratio
 		setting:bridge_flow_ratio
